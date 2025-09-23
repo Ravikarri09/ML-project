@@ -5,4 +5,6 @@ seaborn
 dill
 catboost
 xgboost
+Flask
+matplotlib
 #-e .

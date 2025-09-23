@@ -1,0 +1,110 @@
+/* Reset some default margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background & body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6dd5fa, #2980b9);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Main container */
+.login {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+.login h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Section headings */
+legend {
+    font-size: 18px;
+    color: #34495e;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Form fields */
+.mb-3 {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+    color: #2c3e50;
+}
+
+.form-control, 
+select, 
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover / focus effect on inputs */
+.form-control:focus, 
+input[type="number"]:focus, 
+select:focus {
+    border-color: #2980b9;
+    box-shadow: 0px 0px 6px rgba(41, 128, 185, 0.6);
+}
+
+/* Button styling */
+.btn {
+    width: 100%;
+    background: #2980b9;
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1f5a7a;
+    transform: translateY(-2px);
+}
+
+/* Prediction text */
+h2 {
+    margin-top: 20px;
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Animation for smooth entrance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

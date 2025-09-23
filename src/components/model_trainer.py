@@ -54,7 +54,7 @@ if __name__ == "__main__":
     from data_transformation import DataTransformation
 
     ingestion = DataIngestion()
-    train_path, test_path = ingestion.initiate_data_ingestion("D:/mlproject/notebook/data/StudentsPerformance.csv")
+    train_path, test_path = ingestion.initiate_data_ingestion(r"D:\\mlproject\\notebook\\data\\stud.csv")
 
     transformation = DataTransformation()
     train_arr, test_arr, _ = transformation.initiate_data_transformation(train_path, test_path)

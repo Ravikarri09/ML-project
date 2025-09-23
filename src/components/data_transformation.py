@@ -20,10 +20,10 @@ class DataTransformation:
 
     def get_preprocessor(self):
         try:
-            numerical_columns = ["writing score", "reading score"]
+            numerical_columns = ["writing_score", "reading_score"]
             categorical_columns = [
-                "gender", "race/ethnicity", "parental level of education",
-                "lunch", "test preparation course"
+                "gender", "race_ethnicity", "parental_level_of_education",
+                "lunch", "test_preparation_course"
             ]
 
             num_pipeline = Pipeline([
@@ -50,7 +50,7 @@ class DataTransformation:
             train_df = pd.read_csv(train_path)
             test_df = pd.read_csv(test_path)
 
-            target_col = "math score"
+            target_col = "math_score"
 
             X_train = train_df.drop(columns=[target_col])
             y_train = train_df[target_col]
@@ -73,7 +73,7 @@ class DataTransformation:
 if __name__ == "__main__":
     from data_ingestion import DataIngestion
     ingestion = DataIngestion()
-    train_path, test_path = ingestion.initiate_data_ingestion(r"D:\\mlproject\\notebook\\data\\StudentsPerformance.csv")
+    train_path, test_path = ingestion.initiate_data_ingestion(r"D:\\mlproject\\notebook\\data\\stud.csv")
 
     transformation = DataTransformation()
     train_arr, test_arr, _ = transformation.initiate_data_transformation(train_path, test_path)
